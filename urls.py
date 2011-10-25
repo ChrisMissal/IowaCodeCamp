@@ -8,8 +8,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'icc.views.home', name='home'),
+    url(r'^$', 'icc.web.views.home', name='home'),
     # url(r'^icc/', include('icc.foo.urls')),
+    url(r'^system-time/', 'icc.web.views.current_datetime', name='time'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
