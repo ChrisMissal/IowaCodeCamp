@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6fe583e2-8505-4a10-ae1f-8d4199a26684" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test" afterPath="$PROJECT_DIR$/test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.txt" afterPath="$PROJECT_DIR$/todo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/models.py" afterPath="$PROJECT_DIR$/web/models.py" />
     </list>
     <ignored path="icc.iws" />
@@ -60,7 +61,16 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="682" selection-end="682" vertical-scroll-proportion="0.3761468">
+            <state line="67" column="0" selection-start="1892" selection-end="1892" vertical-scroll-proportion="1.2568808">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todo.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="23" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,7 +111,6 @@
         <option value="C:/Python27/Lib/site-packages/django-1.3.1-py2.7.egg/django/utils/http.py" />
         <option value="$PROJECT_DIR$/web/templates/layout.html" />
         <option value="$PROJECT_DIR$/web/templates/500.html" />
-        <option value="$PROJECT_DIR$/todo.txt" />
         <option value="$PROJECT_DIR$/web/static/style/style.css" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/web/views.py" />
@@ -110,6 +119,7 @@
         <option value="$PROJECT_DIR$/web/templates/home.html" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/web/admin.py" />
+        <option value="$PROJECT_DIR$/todo.txt" />
         <option value="$PROJECT_DIR$/web/models.py" />
       </list>
     </option>
@@ -418,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031307552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" />
@@ -494,9 +497,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="23" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="682" selection-end="682" vertical-scroll-proportion="0.3761468">
+        <state line="67" column="0" selection-start="1892" selection-end="1892" vertical-scroll-proportion="1.2568808">
           <folding />
         </state>
       </provider>

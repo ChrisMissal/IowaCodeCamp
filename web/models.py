@@ -40,25 +40,25 @@ class Sponsor(models.Model):
     )
     level = models.CharField(max_length=2, choices=SPONSORSHIP_LEVELS)
     name = models.CharField(max_length=30)
-    image = models.URLField()
+    image = models.FileField(upload_to='sponsors/')
     link = models.URLField()
-    current = models.BooleanField() # or we just maintain a master list and turn them on/off
+    events = models.ManyToManyField(Event, verbose_name="list of events")
 
     class Admin:
         pass
 
 class Speaker(models.Model):
-    event = models.ForeignKey(Event)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     twitter = models.CharField(max_length=15) # twitter usernames cannot be over 15 characters
     link = models.URLField()
-    image = models.FilePathField()
+    image = models.FileField(upload_to='speakers/%Y/%m/%d/')
 
     class Admin:
         pass
 
 class Session(models.Model):
+    event = models.ForeignKey(Event)
     speaker = models.ForeignKey(Speaker)
     title = models.CharField(max_length=200)
     desc = models.TextField(max_length=2000)

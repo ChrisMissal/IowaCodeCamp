@@ -1,1 +1,2 @@
-South for database migrations
+x   South for database migrations
+    Better file uploads
