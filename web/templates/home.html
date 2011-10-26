@@ -1,12 +1,9 @@
-<html>
-<head>
-    <title>Home</title>
-</head>
-    <h1>Home</h1>
-    <p>Hey look, I'm returning a template.</p>
-    <ul>
-    {% for speaker in speakers %}
-        <li>{{ speaker.name }} - ({{ speaker.session }})</li>
-    {% endfor %}
-    </ul>
-</html>
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+  <ul>
+  {% for speaker in speakers %}
+    <li>{{ speaker.name }} - ({{ speaker.session }})</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
