@@ -6,6 +6,9 @@ class Location(models.Model):
     class Admin:
         pass
 
+    def __str__(self):
+        return self.name
+
 class Event(models.Model):
     location = models.ForeignKey(Location)
     date = models.DateField()
@@ -14,6 +17,9 @@ class Event(models.Model):
 
     class Admin:
         pass
+
+    def __str__(self):
+        return "Iowa Code Camp %i" % self.id
 
 class Attendee(models.Model):
     event = models.ForeignKey(Event)
