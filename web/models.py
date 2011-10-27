@@ -22,7 +22,7 @@ class Event(models.Model):
         return "Iowa Code Camp %i" % self.id
 
 class Attendee(models.Model):
-    event = models.ForeignKey(Event)
+    event = models.ForeignKey(Event, null=False)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
@@ -57,8 +57,11 @@ class Speaker(models.Model):
     class Admin:
         pass
 
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 class Session(models.Model):
-    event = models.ForeignKey(Event)
+    event = models.ForeignKey(Event, null=False)
     speaker = models.ForeignKey(Speaker)
     title = models.CharField(max_length=200)
     desc = models.TextField(max_length=2000)

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Sessions{% endblock %}
+{% block body %}
+    <h2>{{ event }}</h2>
+  <dl>
+  {% for session in sessions %}
+    <dt>{{ session.title }} by {{ session.speaker }}</dt>
+    <dd>{{ session.desc }}</dd>
+  {% endfor %}
+  </dl>
+{% endblock %}

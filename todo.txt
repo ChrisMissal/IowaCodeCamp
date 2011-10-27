@@ -1,2 +1,4 @@
 x   South for database migrations
     Better file uploads
+    model bound canonical
+    
