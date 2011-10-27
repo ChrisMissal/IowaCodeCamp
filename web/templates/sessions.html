@@ -4,7 +4,7 @@
     <h2>{{ event }}</h2>
   <dl>
   {% for session in sessions %}
-    <dt>{{ session.title }} by {{ session.speaker }}</dt>
+    <dt><a href="{{ session.get_absolute_url }}">{{ session.title }}</a> by {{ session.speaker }}</dt>
     <dd>{{ session.desc }}</dd>
   {% endfor %}
   </dl>

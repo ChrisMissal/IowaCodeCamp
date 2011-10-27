@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}{{ session.title }}{% endblock %}
+{% block body %}
+    <h1>{{ session.title }}</h1>
+    <p>{{ session.desc }}</p>
+    <p><strong>{{ session.start_time }} - {{ session.end_time }}</strong></p>
+{% endblock %}

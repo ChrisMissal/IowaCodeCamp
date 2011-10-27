@@ -69,5 +69,8 @@ class Session(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
 
+    def get_absolute_url(self):
+        return "/session/%i/" % self.id
+    
     class Admin:
         pass

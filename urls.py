@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('icc.web.views',
     # Examples:
     url(r'^$', 'home', name='home'),
+    url(r'^session/(\d+)/$', 'session_detail'),
     url(r'^sessions/', 'session'),
     url(r'^throw/', 'throw'),
     url(r'^system-time/', 'current_datetime', name='time'),
