@@ -11,6 +11,8 @@ urlpatterns = patterns('icc.web.views',
     url(r'^$', 'home', name='home'),
     url(r'^session/(\d+)/$', 'session_detail'),
     url(r'^sessions/', 'session'),
+    url(r'^speaker/(\d+)/$', 'speaker_detail'),
+    url(r'^speakers/', 'speaker'),
     url(r'^throw/', 'throw'),
     url(r'^system-time/', 'current_datetime', name='time'),
 )

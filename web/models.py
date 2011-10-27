@@ -48,14 +48,19 @@ class Sponsor(models.Model):
         pass
 
 class Speaker(models.Model):
+    event = models.ForeignKey(Event)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
+    bio = models.TextField(max_length=1000)
     twitter = models.CharField(max_length=15) # twitter usernames cannot be over 15 characters
     link = models.URLField()
     image = models.FileField(upload_to='speakers/%Y/%m/%d/')
 
     class Admin:
         pass
+
+    def get_absolute_url(self):
+        return "/speaker/%i/" % self.id
 
     def __str__(self):
         return self.first_name + " " + self.last_name
