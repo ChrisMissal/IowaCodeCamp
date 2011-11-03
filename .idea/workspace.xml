@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe583e2-8505-4a10-ae1f-8d4199a26684" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/services/converters.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/schedule.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/models.py" afterPath="$PROJECT_DIR$/web/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/tests.py" afterPath="$PROJECT_DIR$/web/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/style/style.css" afterPath="$PROJECT_DIR$/web/static/style/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/home.html" afterPath="$PROJECT_DIR$/web/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/layout.html" afterPath="$PROJECT_DIR$/web/templates/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/sessions.html" afterPath="$PROJECT_DIR$/web/templates/sessions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/speaker.html" afterPath="$PROJECT_DIR$/web/templates/speaker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/speakers.html" afterPath="$PROJECT_DIR$/web/templates/speakers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views.py" afterPath="$PROJECT_DIR$/web/views.py" />
     </list>
     <ignored path="icc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,64 +40,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="layout.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="89" selection-start="1271" selection-end="1271" vertical-scroll-proportion="-5.3103447">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/sessions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="58" selection-start="126" selection-end="126" vertical-scroll-proportion="-1.4193548">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="speaker.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/speaker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="14" selection-start="160" selection-end="160" vertical-scroll-proportion="-3.548387">
+            <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-2.8387096">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/tests.py">
+      <file leaf-file-name="speakers.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/speakers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="62" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
+            <state line="2" column="59" selection-start="143" selection-end="143" vertical-scroll-proportion="-1.4193548">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="converters.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/services/converters.py">
+      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="42" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session_service.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/services/session_service.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="16" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.7174312">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="4" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="320" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +88,43 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+            <state line="15" column="49" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="22" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="96" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/templates/schedule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="21" selection-start="89" selection-end="89" vertical-scroll-proportion="0.08560311">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="64" selection-end="139" vertical-scroll-proportion="-2.1290324">
               <folding />
             </state>
           </provider>
@@ -118,22 +144,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/templates/errors/404.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/web/admin.py" />
-        <option value="$PROJECT_DIR$/todo.txt" />
-        <option value="$PROJECT_DIR$/web/templates/home.html" />
-        <option value="$PROJECT_DIR$/web/templates/session.html" />
-        <option value="$PROJECT_DIR$/web/templates/sessions.html" />
-        <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/web/templates/speakers.html" />
-        <option value="$PROJECT_DIR$/web/views.py" />
-        <option value="$PROJECT_DIR$/web/templates/speaker.html" />
         <option value="$USER_HOME$/.PyCharm10/system/python_stubs/-762174762/datetime.py" />
         <option value="$PROJECT_DIR$/web/services/roman_numerals.py" />
         <option value="$PROJECT_DIR$/web/services/converters.py" />
         <option value="$PROJECT_DIR$/web/tests.py" />
         <option value="$PROJECT_DIR$/web/models.py" />
+        <option value="$PROJECT_DIR$/web/static/style/style.css" />
+        <option value="$PROJECT_DIR$/web/templates/home.html" />
+        <option value="$PROJECT_DIR$/web/templates/speaker.html" />
+        <option value="$PROJECT_DIR$/web/templates/sessions.html" />
+        <option value="$PROJECT_DIR$/web/templates/speakers.html" />
+        <option value="$PROJECT_DIR$/web/templates/about.html" />
+        <option value="$PROJECT_DIR$/web/templates/contact.html" />
+        <option value="$PROJECT_DIR$/web/templates/layout.html" />
+        <option value="$PROJECT_DIR$/web/views.py" />
+        <option value="$PROJECT_DIR$/urls.py" />
+        <option value="$PROJECT_DIR$/web/templates/schedule.html" />
       </list>
     </option>
   </component>
@@ -232,6 +258,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -254,7 +320,7 @@
       <recent name="C:\dev\python-playground\icc\web\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: web.SessionTestCase.testTagifyTitle">
+  <component name="RunManager" selected="Django server.icc">
     <configuration default="false" name="Test: web.TokenizeTestCase.test" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -524,78 +590,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/templates/speakers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/sessions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="12" selection-start="4183" selection-end="4183" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/speaker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="160" selection-end="160" vertical-scroll-proportion="-3.548387">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/services/session_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/migrations/0002_auto__del_field_speaker_event__chg_field_speaker_image__del_field_spon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="56" selection-start="601" selection-end="601" vertical-scroll-proportion="0.5714286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/migrations/0003_auto__add_field_speaker_bio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="991" selection-end="991" vertical-scroll-proportion="-0.6918239">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/migrations/0004_auto__add_field_speaker_event.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="-1.1792452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm10/system/python_stubs/-762174762/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.034591194">
@@ -619,7 +613,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="16" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.7174312">
+        <state line="81" column="12" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django-1.3.1-py2.7.egg/django/template/defaulttags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1204" column="4" selection-start="42118" selection-end="42118" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/speaker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-2.8387096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="64" selection-end="139" vertical-scroll-proportion="-2.1290324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/sessions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="58" selection-start="126" selection-end="126" vertical-scroll-proportion="-1.4193548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/speakers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="59" selection-start="143" selection-end="143" vertical-scroll-proportion="-1.4193548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="320" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="96" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="89" selection-start="1271" selection-end="1271" vertical-scroll-proportion="-5.3103447">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="22" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="89" selection-end="89" vertical-scroll-proportion="0.08560311">
           <folding />
         </state>
       </provider>

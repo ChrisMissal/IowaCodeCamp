@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% block title %}{{ speaker }}{% endblock %}
+
+{% block page-title %}
+<h1>{{ speaker }}</h1>
+{% endblock %}
+
 {% block body %}
-    <h1>{{ speaker }}</h1>
     <p>{{ speaker.bio }}</p>
 {% endblock %}

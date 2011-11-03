@@ -25,6 +25,18 @@ def speaker(request):
     # tie sessions and speakers together here
     return render_to_response('speakers.html', { 'event': event, 'speakers': speakers })
 
+def about(request):
+    #leaders = Leader.objects.get( - some criteria to load the leaders? - )
+    return render_to_response('about.html')
+
+def contact(request):
+    return render_to_response('contact.html')
+
+def schedule(request):
+    return render_to_response('schedule.html')
+
+# Extra pages below...
+
 def error(request):
     return render_to_response('errors/404.html')
 
