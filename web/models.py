@@ -1,4 +1,5 @@
 from django.db import models
+from web.services.converters import int2roman, tagify
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
@@ -19,7 +20,7 @@ class Event(models.Model):
         pass
 
     def __str__(self):
-        return "Iowa Code Camp %i" % self.id
+        return "Iowa Code Camp " + int2roman(self.id)
 
 class Attendee(models.Model):
     event = models.ForeignKey(Event, null=False)
@@ -75,7 +76,7 @@ class Session(models.Model):
     end_time = models.TimeField()
 
     def get_absolute_url(self):
-        return "/session/%i/" % self.id
+        return ("/session/%i/" % self.id) + tagify(self.title)
     
     class Admin:
         pass
