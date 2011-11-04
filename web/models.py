@@ -4,9 +4,6 @@ from web.services.converters import int2roman, tagify
 class Location(models.Model):
     name = models.CharField(max_length=30)
 
-    class Admin:
-        pass
-
     def __str__(self):
         return self.name
 
@@ -16,20 +13,17 @@ class Event(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
 
-    class Admin:
-        pass
+    class Meta:
+        get_latest_by = 'id'
 
     def __str__(self):
         return "Iowa Code Camp " + int2roman(self.id)
-
+    
 class Attendee(models.Model):
     event = models.ForeignKey(Event, null=False)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
-
-    class Admin:
-        pass
 
 class Sponsor(models.Model):
     #event = models.ForeignKey(Event) # not sure if this is a good route to go
@@ -45,9 +39,6 @@ class Sponsor(models.Model):
     link = models.URLField()
     events = models.ManyToManyField(Event, verbose_name="list of events")
 
-    class Admin:
-        pass
-
 class Speaker(models.Model):
     event = models.ForeignKey(Event)
     first_name = models.CharField(max_length=30)
@@ -56,9 +47,6 @@ class Speaker(models.Model):
     twitter = models.CharField(max_length=15) # twitter usernames cannot be over 15 characters
     link = models.URLField()
     image = models.FileField(upload_to='speakers/%Y/%m/%d/')
-
-    class Admin:
-        pass
 
     def get_absolute_url(self):
         return "/speaker/%i/" % self.id
@@ -74,9 +62,11 @@ class Session(models.Model):
     room = models.CharField(max_length=30)
     start_time = models.TimeField()
     end_time = models.TimeField()
+    tag = models.CharField(max_length=70)
 
+    @models.permalink
     def get_absolute_url(self):
-        return ("/session/%i/" % self.id) + tagify(self.title)
-    
-    class Admin:
-        pass
+        return 'icc.web.views.session_detail', [str(self.id), self.tag]
+
+    def __str__(self):
+        return self.title + " by " + str(self.speaker)

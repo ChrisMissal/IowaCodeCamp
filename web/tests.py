@@ -1,4 +1,5 @@
 import unittest
+from django.core.urlresolvers import reverse
 
 from django.test import TestCase
 from datetime import date
@@ -45,12 +46,16 @@ class EventTestCase(unittest.TestCase):
 
 class SessionTestCase(unittest.TestCase):
     def setUp(self):
-        self.one = Session.objects.create(id=45, event_id=1, title='Super Awesome Session Name')
-        self.two = Session.objects.create(id=99, event_id=1, title='Best Session Ever')
+        self.one = Session.objects.create(event_id=1, title='Super Awesome Session Name')
+        self.two = Session.objects.create(event_id=2, title='Best Session Ever')
 
-    #def testTagifyTitle(self):
-    #    self.assertEquals("best-session-ever", tagify(self.two.title))
+    def testTagifyTitle(self):
+        self.assertEquals("best-session-ever", tagify(self.two.title))
 
     def testUrls(self):
-        self.assertEquals("/session/45/super-awesome-session-name", self.one.get_absolute_url())
-        self.assertEquals("/session/99/best-session-ever", self.two.get_absolute_url())
+        self.assertEquals("/session/3/super-awesome-session-name", self.one.get_absolute_url())
+        self.assertEquals("/session/4/best-session-ever", self.two.get_absolute_url())
+
+    def testReverse(self):
+        r = reverse('icc.web.views.session_detail', args=[self.one.id, self.one.tag])
+        print(r)

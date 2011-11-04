@@ -6,13 +6,13 @@ from web.models import Session, Event, Speaker
 def home(request):
     return render_to_response('home.html')
 
-def session_detail(request, id):
+def session_detail(request, id, tag):
     session = Session.objects.get(id=id)
     return render_to_response('session.html', { 'session': session })
 
 def session(request):
-    event = Event.objects.get(id=8)
-    sessions = Session.objects.filter(event=8)
+    event = Event.objects.latest()
+    sessions = Session.objects.filter(event=event.id)
     return render_to_response('sessions.html', { 'event': event, 'sessions': sessions })
 
 def speaker_detail(request, id):
@@ -20,8 +20,8 @@ def speaker_detail(request, id):
     return render_to_response('speaker.html', { 'speaker': speaker })
 
 def speaker(request):
-    event = Event.objects.get(id=8)
-    speakers = Speaker.objects.filter(event=8)
+    event = Event.objects.latest()
+    speakers = Speaker.objects.filter(event=event.id)
     # tie sessions and speakers together here
     return render_to_response('speakers.html', { 'event': event, 'speakers': speakers })
 

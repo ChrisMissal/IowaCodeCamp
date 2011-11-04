@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'icc.urls'
 
-TEMPLATE_DIRS = ('C:/dev/python-playground/icc/templates',)
+TEMPLATE_DIRS = ('C:/dev/python-playground/icc/web/templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',

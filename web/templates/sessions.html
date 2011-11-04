@@ -10,7 +10,7 @@
   <h2>The Sessions</h2>
   <dl>
   {% for session in sessions %}
-    <dt><a href="{{ session.get_absolute_url }}">{{ session.title }}</a> by {{ session.speaker }}</dt>
+    <dt><a href="{% url session_detail session.id, session.tag %}">{{ session.title }}</a> by {{ session.speaker }}</dt>
     <dd>{{ session.desc }}</dd>
   {% endfor %}
   </dl>

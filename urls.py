@@ -9,15 +9,15 @@ admin.autodiscover()
 urlpatterns = patterns('icc.web.views',
     # Examples:
     url(r'^$', 'home', name='home'),
-    url(r'^session/(\d+)/$', 'session_detail'),
-    url(r'^sessions/', 'session', name='sessions'),
+    url(r'^session/(?P<id>\d+)/(?P<title>[a-z0-9\-]+)', 'session_detail', name='session_detail'),
+    url(r'^sessions/$', 'session', name='sessions'),
     url(r'^speaker/(\d+)/$', 'speaker_detail'),
-    url(r'^speakers/', 'speaker', name='speakers'),
-    url(r'^schedule/', 'schedule', name='schedule'),
-    url(r'^about/', 'about', name='about'),
-    url(r'^contact/', 'contact', name='contact'),
-    url(r'^throw/', 'throw'),
-    url(r'^system-time/', 'current_datetime', name='time'),
+    url(r'^speakers/$', 'speaker', name='speakers'),
+    url(r'^schedule/$', 'schedule', name='schedule'),
+    url(r'^about/$', 'about', name='about'),
+    url(r'^contact/$', 'contact', name='contact'),
+    url(r'^throw/$', 'throw'),
+    url(r'^system-time/$', 'current_datetime', name='time'),
 )
 
 urlpatterns += patterns(
