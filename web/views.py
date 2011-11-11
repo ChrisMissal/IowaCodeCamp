@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
 import datetime
-from web.models import Session, Event, Speaker
+from web.models import Session, Event, Speaker, Sponsor
 
 def home(request):
     return render_to_response('home.html')
@@ -24,6 +24,11 @@ def speaker(request):
     speakers = Speaker.objects.filter(event=event.id)
     # tie sessions and speakers together here
     return render_to_response('speakers.html', { 'event': event, 'speakers': speakers })
+
+def sponsors(request):
+    event = Event.objects.latest()
+    sponsors = Sponsor.objects.filter(events=event.id)
+    return render_to_response('sponsors.html', { 'event': event, 'sponsors': sponsors })
 
 def about(request):
     #leaders = Leader.objects.get( - some criteria to load the leaders? - )

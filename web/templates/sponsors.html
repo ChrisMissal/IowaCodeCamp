@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Sponsors{% endblock %}
+{% block nav-sponsors %}<strong class="nav-active">Sponsors</strong>{% endblock %}
+
+{% block page-title %}
+    <h1>Sponsors of {{ event }}</h1>
+{% endblock %}
+
+{% block body %}
+    <p>We couldn't host these great events without our fantastic sponsors.</p>
+    <ul>
+    {% comment %}
+    TODO: Sponsors are going to be organized from high to low, this needs to be added...
+    {% endcomment %}
+    {% for sponsor in sponsors %}
+        <a href="{{ sponsor.link }}">{{ sponsor }}</a>
+    {% endfor %}
+    </ul>
+{% endblock %}

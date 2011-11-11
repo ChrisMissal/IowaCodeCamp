@@ -39,6 +39,9 @@ class Sponsor(models.Model):
     link = models.URLField()
     events = models.ManyToManyField(Event, verbose_name="list of events")
 
+    def __str__(self):
+        return self.name
+
 class Speaker(models.Model):
     event = models.ForeignKey(Event)
     first_name = models.CharField(max_length=30)
