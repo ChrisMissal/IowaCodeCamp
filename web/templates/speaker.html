@@ -2,9 +2,10 @@
 {% block title %}{{ speaker }}{% endblock %}
 
 {% block page-title %}
-<h1>{{ speaker }}</h1>
+<h1>{{ speaker.event }}</h1>
 {% endblock %}
 
 {% block body %}
+    <h2>{{ speaker }}</h2>
     <p>{{ speaker.bio }}</p>
 {% endblock %}

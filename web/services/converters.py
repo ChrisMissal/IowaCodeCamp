@@ -1,5 +1,3 @@
-import string
-
 def int2roman(number):
     '''
     So yeah, I wanted to use Roman Numerals and found this class online
@@ -12,14 +10,3 @@ def int2roman(number):
             result += numeral
             number -= value
     return result
-
-def tagify(value):
-    '''
-    I would like to create nice URLs and this function does that
-    '''
-    value = value.lower().replace('/', ' ').replace('&', ' and ')
-    value = value.replace('.net', 'dot net').replace(' - ', ' ')
-    value = value.replace('f#', 'f sharp')
-    value = value.replace('c#', 'c sharp')
-    value = value.translate(None, string.punctuation).replace(' ', '-')
-    return value.replace('--', '-')

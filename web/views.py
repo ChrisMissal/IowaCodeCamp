@@ -6,7 +6,7 @@ from web.models import Session, Event, Speaker
 def home(request):
     return render_to_response('home.html')
 
-def session_detail(request, id, tag):
+def session_detail(request, id):
     session = Session.objects.get(id=id)
     return render_to_response('session.html', { 'session': session })
 

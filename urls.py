@@ -3,15 +3,16 @@ from django.conf.urls.defaults import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from web.views import current_datetime
+from django.conf.urls.defaults import url, patterns
 
 admin.autodiscover()
 
 urlpatterns = patterns('icc.web.views',
     # Examples:
     url(r'^$', 'home', name='home'),
-    url(r'^session/(?P<id>\d+)/(?P<title>[a-z0-9\-]+)', 'session_detail', name='session_detail'),
+    url(r'^session/(?P<id>\d+)/(.*)', 'session_detail', {}, name='session_detail'),
     url(r'^sessions/$', 'session', name='sessions'),
-    url(r'^speaker/(\d+)/$', 'speaker_detail'),
+    url(r'^speaker/(?P<id>\d+)/(.*)', 'speaker_detail', {}, name='speaker_detail'),
     url(r'^speakers/$', 'speaker', name='speakers'),
     url(r'^schedule/$', 'schedule', name='schedule'),
     url(r'^about/$', 'about', name='about'),

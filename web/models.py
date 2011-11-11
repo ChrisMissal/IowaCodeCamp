@@ -1,5 +1,5 @@
 from django.db import models
-from web.services.converters import int2roman, tagify
+from web.services.converters import int2roman
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
@@ -47,9 +47,11 @@ class Speaker(models.Model):
     twitter = models.CharField(max_length=15) # twitter usernames cannot be over 15 characters
     link = models.URLField()
     image = models.FileField(upload_to='speakers/%Y/%m/%d/')
+    slug = models.SlugField(max_length=100, null=True)
 
+    @models.permalink
     def get_absolute_url(self):
-        return "/speaker/%i/" % self.id
+        return 'icc.web.views.speaker_detail', [self.id, self.slug]
 
     def __str__(self):
         return self.first_name + " " + self.last_name
@@ -62,11 +64,11 @@ class Session(models.Model):
     room = models.CharField(max_length=30)
     start_time = models.TimeField()
     end_time = models.TimeField()
-    tag = models.CharField(max_length=70)
+    slug = models.SlugField(max_length=100, null=True)
 
     @models.permalink
     def get_absolute_url(self):
-        return 'icc.web.views.session_detail', [str(self.id), self.tag]
+        return 'icc.web.views.session_detail', [self.id, self.slug]
 
     def __str__(self):
         return self.title + " by " + str(self.speaker)

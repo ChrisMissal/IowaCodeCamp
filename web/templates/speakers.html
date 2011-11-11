@@ -10,7 +10,7 @@
     <h2>Speakers for {{ event }}</h2>
   <dl>
   {% for speaker in speakers %}
-    <dt><a href="{{ speaker.get_absolute_url }}">{{ speaker }}</a></dt>
+    <dt><a href="{% url speaker_detail speaker.id, speaker.slug %}">{{ speaker }}</a></dt>
     <dd>{{ speaker.bio }}</dd>
   {% endfor %}
   </dl>
