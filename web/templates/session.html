@@ -7,7 +7,7 @@
 
 {% block body %}
     <h1>{{ session.title }}</h1>
-    <p>Presented by: <a href="{% url speaker_detail session.speaker.id, speaker.slug %}">{{ session.speaker }}</a></p>
+    <p>Presented by: <a href="{% url speaker_detail session.speaker.id, session.speaker.slug %}">{{ session.speaker }}</a></p>
     <p>{{ session.desc }}</p>
     <p><strong>{{ session.start_time }} - {{ session.end_time }}</strong></p>
 {% endblock %}

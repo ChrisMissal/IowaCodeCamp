@@ -12,7 +12,7 @@ def session_detail(request, id):
 
 def session(request):
     event = Event.objects.latest()
-    sessions = Session.objects.filter(event=event.id)
+    sessions = Session.objects.filter(event=event.id, confirmed=True)
     return render_to_response('sessions.html', { 'event': event, 'sessions': sessions })
 
 def speaker_detail(request, id):
@@ -21,7 +21,7 @@ def speaker_detail(request, id):
 
 def speaker(request):
     event = Event.objects.latest()
-    speakers = Speaker.objects.filter(event=event.id)
+    speakers = Speaker.objects.filter(event=event.id).filter(session__confirmed=True)
     # tie sessions and speakers together here
     return render_to_response('speakers.html', { 'event': event, 'speakers': speakers })
 

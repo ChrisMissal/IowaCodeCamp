@@ -13,6 +13,8 @@
     <dt><a href="{% url session_detail session.id, session.slug %}">{{ session.title }}</a> by
         <a href="{% url speaker_detail session.speaker.id, session.speaker.slug %}">{{ session.speaker }}</a></dt>
     <dd>{{ session.desc }}</dd>
+  {% empty %}
+      <p>We aren't taking submissions at this time for our next code camp, check back soon!</p>
   {% endfor %}
   </dl>
 {% endblock %}

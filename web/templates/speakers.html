@@ -12,6 +12,9 @@
   {% for speaker in speakers %}
     <dt><a href="{% url speaker_detail speaker.id, speaker.slug %}">{{ speaker }}</a></dt>
     <dd>{{ speaker.bio }}</dd>
+  {% empty %}
+      <dt>We haven't selected speakers yet</dt>
+      <dd>Stay tuned for more information on when we're accepting speakers. As we start picking them, they'll show up here.</dd>
   {% endfor %}
   </dl>
 {% endblock %}

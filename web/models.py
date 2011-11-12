@@ -26,7 +26,6 @@ class Attendee(models.Model):
     email = models.EmailField()
 
 class Sponsor(models.Model):
-    #event = models.ForeignKey(Event) # not sure if this is a good route to go
     PLATINUM = 10
     GOLD = 20
     SILVER = 30
@@ -75,7 +74,8 @@ class Session(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     slug = models.SlugField(max_length=100, null=True)
-
+    confirmed = models.BooleanField(null=False, default=False)
+    
     @models.permalink
     def get_absolute_url(self):
         return 'icc.web.views.session_detail', [self.id, self.slug]
