@@ -27,18 +27,25 @@ class Attendee(models.Model):
 
 class Sponsor(models.Model):
     #event = models.ForeignKey(Event) # not sure if this is a good route to go
+    PLATINUM = 10
+    GOLD = 20
+    SILVER = 30
+    SUPPORTER = 40
     SPONSORSHIP_LEVELS = (
-        (u'PL', u'Platinum'),
-        (u'GO', u'Gold'),
-        (u'SI', u'Silver'),
-        (u'SP', u'Supporter')
+        (PLATINUM,  u'Platinum'),
+        (GOLD,      u'Gold'),
+        (SILVER,    u'Silver'),
+        (SUPPORTER, u'Supporter')
     )
-    level = models.CharField(max_length=2, choices=SPONSORSHIP_LEVELS)
+    level = models.IntegerField(choices=SPONSORSHIP_LEVELS)
     name = models.CharField(max_length=30)
     image = models.FileField(upload_to='sponsors/')
     link = models.URLField()
     events = models.ManyToManyField(Event, verbose_name="list of events")
 
+    class Meta:
+        ordering = ['level']
+        
     def __str__(self):
         return self.name
 

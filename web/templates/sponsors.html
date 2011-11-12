@@ -12,8 +12,13 @@
     {% comment %}
     TODO: Sponsors are going to be organized from high to low, this needs to be added...
     {% endcomment %}
-    {% for sponsor in sponsors %}
-        <a href="{{ sponsor.link }}">{{ sponsor }}</a>
+    {% for sponsor in sponsors.filter %}
+        {% ifchanged %}<h3>{{ sponsor.get_level_display }}</h3>{% endifchanged %}
+        <div class="sponsor">
+            <a href="{{ sponsor.link }}">{{ sponsor }}</a>
+        </div>
+    {% empty %}
+        <p>We are currently looking for sponsors. <a href="/contact">Contact us</a> to help us out by sponsoring!</p>
     {% endfor %}
     </ul>
 {% endblock %}
