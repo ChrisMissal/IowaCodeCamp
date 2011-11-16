@@ -1,6 +1,10 @@
-from django.http import HttpResponse
+from django.core.context_processors import csrf
+from django.forms.models import modelformset_factory
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 import datetime
+from django.template.context import RequestContext
+from django.views.decorators.csrf import csrf_protect
 from web.models import Session, Event, Speaker, Sponsor
 
 def home(request):
@@ -39,6 +43,28 @@ def contact(request):
 
 def schedule(request):
     return render_to_response('schedule.html')
+
+def submit(request):
+    exclusions = ('event','speaker','room','start_time','end_time','slug','confirmed')
+    SessionFormSet = modelformset_factory(Session, exclude=exclusions)
+    if request.method == 'POST':
+        formset = SessionFormSet(request.POST, request.FILES, Session.objects.none())
+        if formset.is_valid():
+            formset.save()
+            return HttpResponseRedirect('/thanks')
+        else:
+            return HttpResponseRedirect('/submit')
+    else:
+        c = RequestContext(request)
+        c.update(csrf(request))
+        formset = SessionFormSet(queryset=Session.objects.none())
+
+    return render_to_response('submit.html', {
+        'formset': formset,
+    }, c)
+
+def thanks(request):
+    return render_to_response('thanks.html')
 
 # Extra pages below...
 
