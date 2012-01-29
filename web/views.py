@@ -44,6 +44,44 @@ def contact(request):
 def schedule(request):
     return render_to_response('schedule.html')
 
+def new_submission(request):
+    session_exclusions = ('event','speaker','room','start_time','end_time','slug','confirmed')
+    SessionFormSet = modelformset_factory(Session, exclude=session_exclusions)
+    SpeakerFormSet = modelformset_factory(Speaker, exclude=('slug',))
+    if request.method == 'POST':
+        session_formset = SessionFormSet(request.POST, prefix='session')
+        speaker_formset = SpeakerFormSet(request.POST, request.FILES, prefix='speaker')
+        if session_formset.is_valid() and speaker_formset.is_valid():
+            # do something with the cleaned_data on the formsets.
+            pass
+    else:
+        session_formset = SessionFormSet(Session.objects.none(), prefix='session')
+        speaker_formset = SpeakerFormSet(Speaker.objects.none(), prefix='speaker')
+    return render_to_response('submit.html', {
+        'session_formset': session_formset,
+        'speaker_formset': speaker_formset,
+    })
+
+def speaker_submit(request):
+    SpeakerFormSet = modelformset_factory(Speaker, exclude=('slug',))
+    if request.method == 'POST':
+        formset = SpeakerFormSet(request.POST, request.FILES, Speaker.objects.none())
+        if formset.is_valid():
+            request.session['speaker'] = formset.model
+            return HttpResponseRedirect('/session_submit')
+        else:
+            return HttpResponseRedirect('/speaker')
+    else:
+        c = RequestContext(request)
+        c.update(csrf(request))
+        speaker = Speaker.objects.none()
+        speaker.event = Event.objects.latest()
+        formset = SpeakerFormSet(queryset=speaker)
+
+    return render_to_response('speaker_submit.html', {
+        'formset': formset,
+    }, c)
+
 def submit(request):
     exclusions = ('event','speaker','room','start_time','end_time','slug','confirmed')
     SessionFormSet = modelformset_factory(Session, exclude=exclusions)

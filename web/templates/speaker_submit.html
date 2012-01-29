@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Submit a Session - Speaker Details{% endblock %}
+
+{% block page-title %}
+    <h1>Submit a Session</h1>
+{% endblock %}
+
+{% block body %}
+    <h2>Speaker Details</h2>
+    <form method="post" action="/submit/">
+        {% csrf_token %}
+        {{ formset }}
+        <input type="submit" value="Next" />
+    </form>
+{% endblock %}

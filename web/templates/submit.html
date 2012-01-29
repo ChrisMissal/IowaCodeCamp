@@ -8,6 +8,12 @@
 {% block body %}
     <form method="post" action="/submit/">
         {% csrf_token %}
-        {{ formset }}
+        <table cellpadding="3" cellspacing="1" border="0">
+            {{ speaker_formset }}
+        </table>
+        <hr/>
+        <table cellpadding="3" cellspacing="1" border="0">
+            {{ session_formset }}
+        </table>
     </form>
 {% endblock %}

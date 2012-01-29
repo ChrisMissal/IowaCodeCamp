@@ -52,6 +52,7 @@ class Speaker(models.Model):
     event = models.ForeignKey(Event)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
+    email = models.EmailField()
     bio = models.TextField(max_length=1000)
     twitter = models.CharField(max_length=15) # twitter usernames cannot be over 15 characters
     link = models.URLField()
